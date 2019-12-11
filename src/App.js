@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import axios from "axios";
+import NasaCard from "./components/NasaCard";
 
 function App() {
   let [nasa, setNasa] = useState([]);
@@ -17,11 +17,16 @@ function App() {
       })
       .catch(err => console.log(err));
   }, []);
+  console.log(nasa);
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h2>{nasa.date}</h2>
+        <NasaCard
+          date={nasa.date}
+          title={nasa.title}
+          url={nasa.url}
+          explanation={nasa.explanation}
+        />
       </header>
     </div>
   );
