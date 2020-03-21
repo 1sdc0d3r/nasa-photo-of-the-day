@@ -1,23 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useEffect, useState } from "react";
+import "./App.css";
+import axios from "axios";
+import NasaCard from "./components/NasaCard";
+// import Calendar from "./components/Calendar";
 function App() {
+  let [nasa, setNasa] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(
+        "https://api.nasa.gov/planetary/apod?api_key=RR4nfp6N4yPogjd0s32Q2GywGcMGDdxdhcRA86R0"
+      )
+      .then(res => {
+        setNasa(res.data);
+        console.log(res);
+      })
+      .catch(err => console.log(err));
+  }, []);
+  console.log(nasa);
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <NasaCard
+          date={nasa.date}
+          title={nasa.title}
+          url={nasa.url}
+          explanation={nasa.explanation}
+        />
+        {/* <Button color="warning">Reactstrap Button</Button> */}
+        {/* <Calendar /> */}
       </header>
     </div>
   );
