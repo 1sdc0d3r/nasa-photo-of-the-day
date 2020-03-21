@@ -9,7 +9,7 @@ export default function NasaCard(props) {
       <img className="media" src={props.url} alt="media here"></img>
       <p className="explanation">{props.explanation}</p>
       <p class="link">
-        <a href="http://google.com"> Braden's Portfolio</a>
+        <a href="https://portfolio.bradenbell.now.sh/"> Braden's Portfolio</a>
       </p>
       {/* <Button color="primary">Braden's Portfolio</Button> */}
       {/* <CardMedia
