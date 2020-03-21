@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  margin: auto;
 }
 
 .App-logo {
@@ -16,6 +17,8 @@
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
+  width: 80%;
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,32 +32,50 @@
 }
 
 .card {
-  background-color: midnightblue;
+  background-color: rgb(20, 20, 110);
   border: 1px solid red;
   width: 90%;
   text-align: center;
 }
 .title {
   color: coral;
+  width: 80%;
+  margin: 1rem auto;
 }
 
 .date {
   color: palevioletred;
+  margin: auto;
+  margin-bottom: 1rem;
 }
 
 .media {
-  width: 80%;
-  margin-bottom: 15px;
+  width: 60%;
+  margin-bottom: 20px;
+  border: 5px ridge rgb(17, 17, 83);
 }
 
 .explanation {
-  font-size: 1rem;
-  width: 90%;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  width: 85%;
   margin: auto;
 }
 
 .material-ui-cardMedia {
   font-size: 0.75rem;
+}
+
+.link {
+  width: 25%;
+  margin: 1.2rem auto;
+  border: 2px solid rgb(66, 131, 175);
+  border-radius: 30%;
+  padding: 0.125rem;
+}
+.link a {
+  text-decoration: none;
+  color: rgb(66, 131, 175);
 }
 
 @keyframes App-logo-spin {

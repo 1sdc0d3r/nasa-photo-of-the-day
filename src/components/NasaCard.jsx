@@ -8,7 +8,10 @@ export default function NasaCard(props) {
       <h4 className="date">{props.date}</h4>
       <img className="media" src={props.url} alt="media here"></img>
       <p className="explanation">{props.explanation}</p>
-      <Button color="primary">Material-UI Button</Button>
+      <p class="link">
+        <a href="http://google.com"> Braden's Portfolio</a>
+      </p>
+      {/* <Button color="primary">Braden's Portfolio</Button> */}
       {/* <CardMedia
         src={props.url}
         image={props.url}
